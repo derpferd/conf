@@ -19,9 +19,10 @@ fi
 #
 # mwinit_validate
 function mwinit_validate() {
- echo "checking for Midway authentication"
- local SSH_CERT=~/.ssh/id_rsa-cert.pub
- if (! test -f "$SSH_CERT") || (test "`find ~/.ssh/id_rsa-cert.pub -mmin +1220`"); then
+  echo "checking for Midway authentication"
+  if (! test -f ~/.midway/cookie) || [ $(grep HttpOnly_midway-auth.amazon.com ~/.midway/cookie | cut -d $'\t' -f 5) -lt $( date  +%s ) ]; then
+ #local SSH_CERT=~/.ssh/id_rsa-cert.pub
+ #if (! test -f "$SSH_CERT") || (test "`find ~/.ssh/id_rsa-cert.pub -mmin +1220`"); then
    echo "Midway expired. Please re-authenticate."
    if mwinit -o ; then
       run_ssh_agent
@@ -40,8 +41,7 @@ function quiet_auth_check() {
   else
     echo -n "%{$fg[green]%}K"
   fi
-  SSH_CERT=~/.ssh/id_rsa-cert.pub
-  if (! test -f "$SSH_CERT") || (test "`find ~/.ssh/id_rsa-cert.pub -mmin +1220`"); then
+  if (! test -f ~/.midway/cookie) || [ $(grep HttpOnly_midway-auth.amazon.com ~/.midway/cookie | cut -d $'\t' -f 5) -lt $( date  +%s ) ]; then
     echo "%{$fg[red]%}M"
   else
     echo "%{$fg[green]%}M"
@@ -59,8 +59,7 @@ function amazon_auth_prompt() {
     k=true
   fi
 
-  SSH_CERT=~/.ssh/id_rsa-cert.pub
-  if (! test -f "$SSH_CERT") || (test "`find ~/.ssh/id_rsa-cert.pub -mmin +1220`"); then
+  if (! test -f ~/.midway/cookie) || [ $(grep HttpOnly_midway-auth.amazon.com ~/.midway/cookie | cut -d $'\t' -f 5) -lt $( date  +%s ) ]; then
     if [ "$k" = false ]; then
       echo -n "$AZM_AUTH_PROMPT_PREFIX"
     fi

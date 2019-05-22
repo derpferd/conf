@@ -19,6 +19,8 @@ function unix_type_f() {
     echo "OS X"
   elif (( $+commands[pacman] )) ; then # only arch linux has this
     echo "Arch"
+  else
+    echo "$(uname)"
   fi
 }
 

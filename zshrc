@@ -1,5 +1,71 @@
+source /apollo/env/envImprovement/var/zshrc
+
+export BRAZIL_WORKSPACE_DEFAULT_LAYOUT=short
+
+for f in SDETools envImprovement AmazonAwsCli OdinTools; do
+    if [[ -d /apollo/env/$f ]]; then
+        export PATH=$PATH:/apollo/env/$f/bin
+    fi
+done
+
+export AUTO_TITLE_SCREENS="NO"
+
+export PROMPT="
+%{$fg[white]%}(%D %*) <%?> [%~] $program %{$fg[default]%}
+%{$fg[cyan]%}%m %#%{$fg[default]%} "
+
+export RPROMPT=
+
+set-title() {
+    echo -e "\e]0;$*\007"
+}
+
+ssh() {
+    set-title $*;
+    /usr/bin/ssh -2 $*;
+    set-title $HOST;
+}
+
+alias e=emacs
+alias bb=brazil-build
+
+alias bba='brazil-build apollo-pkg'
+alias bre='brazil-runtime-exec'
+alias brc='brazil-recursive-cmd'
+alias bws='brazil ws'
+alias bwsuse='bws use --gitMode -p'
+alias bwscreate='bws create -n'
+alias brc=brazil-recursive-cmd
+alias bbr='brc brazil-build'
+alias bball='brc --allPackages'
+alias bbb='brc --allPackages brazil-build'
+alias bbra='bbr apollo-pkg'
+
+if [ -f ~/.zshrc-dev-dsk-post ]; then
+    source ~/.zshrc-dev-dsk-post
+fi
+
+export PATH=$HOME/.toolbox/bin:$PATH
+
+fpath=(~/.zsh/completion $fpath)
+autoload -Uz compinit && compinit -i
+
+# Make copies here of variables that are used in the OH MY ZSH that need to be
+# replaced after
+ENV_ZSH=$ZSH
+ENV_HOME=$HOME
+ENV_ZSH_THEME=$ZSH_THEME
+
+export SSH_CLIENT=""
+HOME=/home/beauliej
 # Path to your oh-my-zsh installation.
-export ZSH=~/.oh-my-zsh
+ZSH=$HOME/.oh-my-zsh
+ZSH_THEME="fino"
+plugins=(git)
+DEFAULT_USER=beauliej
+
+source $ZSH/oh-my-zsh.sh
+
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -53,10 +119,6 @@ plugins=(git amazon)
 
 # User configuration
 
-export PATH="/home/csugrads/beau0307/LinuxPrograms/lib/:/home/csgrads/beau0307/usr/local/lib:/u01/app/oracle/product/11.2.0/xe/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
-# export MANPATH="/usr/local/man:$MANPATH"
-export JUNEST_HOME="~/.junest2"
-
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
@@ -69,51 +131,9 @@ source $ZSH/oh-my-zsh.sh
 #   export EDITOR='mvim'
 # fi
 
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
-function enc() {
-openssl aes-256-cbc -in "$1" -out "$1.enc";
-}
-function dcyp() {
-local file=$1;
-openssl aes-256-cbc -d -in "$1" -out "${file%.*}";
-}
-
-# To setup oracle
-if [ -f /u01/app/oracle/product/11.2.0/xe/bin/nls_lang.sh ]; then
-    export ORACLE_HOME=/u01/app/oracle/product/11.2.0/xe
-    export ORACLE_SID=XE
-    export NLS_LANG=$("$ORACLE_HOME"/bin/nls_lang.sh)
-    export ORACLE_BASE=/u01/app/oracle
-    export LD_LIBRARY_PATH=$ORACLE_HOME/lib
-    export PATH=$ORACLE_HOME/bin:$PATH
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
 fi
-
-#export PATH=~/.local/share/junest/bin:$PATH
-#export JUNEST_TEMPDIR=/tmp/j
-export PATH=~/.junest2/opt/junest/bin:$PATH
-[[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
-
-#export PATH="/home/csgrads/beau0307/miniconda3/bin:$PATH"
-export PATH="$HOME/bin:$PATH"
-
-#if command -v pyenv 1>/dev/null 2>&1; then
-#  eval "$(pyenv init -)"
-#fi
-#eval "$(pyenv virtualenv-init -)"
 
 if [ -f ~/.rc/pathvars ]; then
     source ~/.rc/pathvars
@@ -122,3 +142,8 @@ fi
 if [ -f ~/.rc/aliases ]; then
     source ~/.rc/aliases
 fi
+
+# restore environment variables
+ZSH=$ENV_ZSH
+HOME=$ENV_HOME
+ZSH_THEME=$ENV_ZSH_THEME

@@ -23,11 +23,8 @@ alias pser='python -m SimpleHTTPServer'
 alias spip='sudo -H pip'
 alias pipi='sudo -H pip install'
 
-# Python Envs
-#alias nlp='source ~/nlp_tools/pyenv/bin/activate'
-
 # Editor
-alias v='nvim'
+alias v='vim'
 
 # Git: Stole these from Maz@https://github.com/kasldfh/dotfiles
 alias gpm='git push origin master'
