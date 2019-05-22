@@ -10,6 +10,7 @@ preinstall:
 
 download:
 	(cd ~; git clone https://github.com/robbyrussell/oh-my-zsh.git .oh-my-zsh)
+	(cd ~/.ssh; curl https://security-bastions.amazon.com/noauth/bastions/prod/redhat.ssh.config > config)
 	./fix_oh_my_zsh.sh
 
 link:
