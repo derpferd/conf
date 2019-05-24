@@ -7,6 +7,12 @@ if [ ! -d "$HOME/.pyenv" ]; then
  git clone https://github.com/pyenv/pyenv.git ~/.pyenv
 fi
 
+if [ ! -d "$HOME/eclipse" ]; then
+    /apollo/env/SDETools/bin/install-eclipse
+    /apollo/env/SDETools/bin/install-eclipse-plugins brazil
+    sudo cp ~/eclipse/active/icon.xpm /usr/share/pixmaps/eclipse.xpm
+fi
+
 if ! [ -x "$(command -v rde)" ]; then
     echo "RDE is not installed! please Install"
     exit 1

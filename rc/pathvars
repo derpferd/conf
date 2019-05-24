@@ -8,6 +8,9 @@ fi
 
 export PATH="$HOME/bin:$PATH"
 
+# Eclipse
+export PATH="$HOME/eclipse/active:$PATH"
+
 # Go Stuff
 #export PATH=$PATH:$(go env GOPATH)/bin
 #export GOPATH=$(go env GOPATH)
