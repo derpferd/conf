@@ -1,3 +1,11 @@
+#### Amazon Stuff ####
+
+# SAM
+alias sam='brazil-build-tool-exec sam'
+
+# LPT
+alias bblpt='brazil-build && yes | brazil-build synthesize-cloud-formation && yes | brazil-build synthesize-pipeline && yes | brazil-build synthesize'
+
 #### Other Stuff ####
 
 # Apt-get
