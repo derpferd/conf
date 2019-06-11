@@ -15,6 +15,9 @@ alias bbr='bb release'
 # SAM
 alias sam="brazil-build-tool-exec sam"
 
+# DB
+alias odb_prod='pgcli -h oncilla-prod.ccdybihqvmpq.us-east-1.rds.amazonaws.com -d oncilla_prod -p 8192 -U'
+
 #### Other Stuff ####
 
 # Apt-get

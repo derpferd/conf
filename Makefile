@@ -9,6 +9,8 @@ download:
 	(cd ~; git clone https://github.com/robbyrussell/oh-my-zsh.git .oh-my-zsh)
 
 link:
+	mkdir -p ~/.config
+	ln -s ~/conf/config/nvim ~/.config/nvim
 	ln -s ~/conf/oh-my-zsh/custom/themes/jbb.zsh-theme ~/.oh-my-zsh/custom/themes/jbb.zsh-theme
 	ln -s ~/conf/rc ~/.rc
 	ln -s ~/conf/oh-my-zsh/custom/plugins/amazon ~/.oh-my-zsh/custom/plugins/amazon
@@ -25,6 +27,7 @@ unlink:
 	rm -f ~/.tmux.conf
 	rm -f ~/.tmux.conf.local
 	rm -f ~/.zshrc
+	rm -f ~/.config/nvim
 
 remove:
 	rm -rf ~/.oh-my-zsh
