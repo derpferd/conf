@@ -6,6 +6,11 @@ alias sam='brazil-build-tool-exec sam'
 # LPT
 alias bblpt='brazil-build && yes | brazil-build synthesize-cloud-formation && yes | brazil-build synthesize-pipeline && yes | brazil-build synthesize'
 
+# Brazil
+alias bwsync='bws --sync --md'
+alias pyrun='brazil-runtime-exec'
+alias bbrun='bb && pyrun'
+
 #### Other Stuff ####
 
 # Apt-get
@@ -27,7 +32,7 @@ fi
 alias python='python3'
 alias py='python'
 alias py3='python3'
-alias pser='python -m SimpleHTTPServer'
+alias pser='python3 -m http.server'
 alias spip='sudo -H pip'
 alias pipi='sudo -H pip install'
 
