@@ -11,6 +11,13 @@ alias bwsync='bws --sync --md'
 alias pyrun='brazil-runtime-exec'
 alias bbrun='bb && pyrun'
 
+# STT Stuff
+alias ops-corp="sshenv -s Prod LDMOpsTools/CORP-NA"
+alias ops-na="sshenv -s Prod LDMOpsTools/US-EAST"
+alias ops-eu="sshenv -s Prod LDMOpsTools/EU-WEST"
+alias ops-fe="sshenv -s Prod LDMOpsTools/US-WEST"
+alias ops-cn="sshenv -s Prod LDMOpsTools/CN-NORTH"
+
 #### Other Stuff ####
 # Basic
 alias x='exit'
