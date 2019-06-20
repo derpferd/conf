@@ -11,6 +11,9 @@ export PATH="$HOME/bin:$PATH"
 # Eclipse
 export PATH="$HOME/eclipse/active:$PATH"
 
+# Mossy
+export PATH="$PATH:/apollo/env/Mossy/bin"
+
 # Go Stuff
 #export PATH=$PATH:$(go env GOPATH)/bin
 #export GOPATH=$(go env GOPATH)

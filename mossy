@@ -1,0 +1,40 @@
+[ldm-iad]
+region = IAD
+materialsetname = com.amazon.access.localization-timber-Timber-1
+owneremail = localization-dev+timber@amazon.com
+
+[lms-na]
+region = IAD
+materialsetname = com.amazon.access.localization-timber-Timber-1
+owneremail = localization-dev+timber@amazon.com
+
+[ldm-cn]
+ownerid = 299015632994
+region = PEK
+materialsetname = com.amazon.access.localization-timber-pek-Timber-1
+
+[lms-fe]
+region = PDX
+materialsetname = com.amazon.access.localization-timber-Timber-1
+owneremail = localization-dev+timber@amazon.com
+
+[lms-eu]
+region = DUB
+materialsetname = com.amazon.access.localization-timber-Timber-1
+owneremail = localization-dev+timber@amazon.com
+
+[ldm-pdx]
+region = PDX
+materialsetname = com.amazon.access.localization-timber-Timber-1
+owneremail = localization-dev+timber@amazon.com
+
+[ldm-dub]
+region = DUB
+materialsetname = com.amazon.access.localization-timber-Timber-1
+owneremail = localization-dev+timber@amazon.com
+
+[panther]
+region = PDX
+materialsetname = com.amazon.access.localization-timber-Timber-1
+owneremail = localization-dev+timber@amazon.com
+
