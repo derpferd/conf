@@ -1,7 +1,4 @@
-let g:python3_hot_prog = '/Users/beauliej/.pyenv/versions/3.7.0/bin/python3'
-
 call plug#begin('~/.local/share/nvim/plugged')
-
 
     " airline is a better status line and a tab-bar for nvim.
     Plug 'vim-airline/vim-airline'
@@ -19,12 +16,27 @@ call plug#begin('~/.local/share/nvim/plugged')
     " ctrl-p is a fuzzy file finder.
     Plug 'kien/ctrlp.vim'
 
+    " Autocomplete
+    Plug 'ncm2/ncm2'
+    Plug 'roxma/nvim-yarp'
+
+    Plug 'ncm2/ncm2-bufword'
+    Plug 'ncm2/ncm2-path'
+    Plug 'ncm2/ncm2-jedi'
+
+    " syntax check
+    Plug 'w0rp/ale'
+
+    " Formater
+    Plug 'Chiel92/vim-autoformat'
+
 call plug#end()
 
 let mapleader="\<SPACE>"
 
 set showmatch           " Show matching brackets.
 set number              " Show the line numbers on the left side.
+set relativenumber
 set expandtab           " Insert spaces when TAB is pressed.
 set tabstop=4           " Render TABs using this many spaces.
 set shiftwidth=4        " Indentation amount for < and > commands.
@@ -86,6 +98,29 @@ let g:NERDTreeIndicatorMapCustom = {
     \ 'Ignored'   : '☒',
     \ "Unknown"   : "?"
     \ }
+
+
+" NCM2
+augroup NCM2
+  autocmd!
+  " enable ncm2 for all buffers
+  autocmd BufEnter * call ncm2#enable_for_buffer()
+  " :help Ncm2PopupOpen for more information
+  set completeopt=noinsert,menuone,noselect
+  " When the <Enter> key is pressed while the popup menu is visible, it only
+  " hides the menu. Use this mapping to close the menu and also start a new line.
+  inoremap <expr> <CR> (pumvisible() ? "\<c-y>\<cr>" : "\<CR>")
+  " uncomment this block if you use vimtex for LaTex
+  " autocmd Filetype tex call ncm2#register_source({
+  "           \ 'name': 'vimtex',
+  "           \ 'priority': 8,
+  "           \ 'scope': ['tex'],
+  "           \ 'mark': 'tex',
+  "           \ 'word_pattern': '\w+',
+  "           \ 'complete_pattern': g:vimtex#re#ncm2,
+  "           \ 'on_complete': ['ncm2#on_complete#omni', 'vimtex#complete#omnifunc'],
+  "           \ })
+augroup END
 
 
 " vim:set ft=vim sw=4 ts=4:
