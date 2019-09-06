@@ -3,6 +3,19 @@
 #         without any warranty.
 #         Copyright 2012— Gregory Pakosz (@gpakosz).
 
+# -- plugins ------------------------------------------------------------------
+
+# Plugin List
+set -g @plugin 'tmux-plugins/tpm'
+set -g @plugin 'tmux-plugins/tmux-sensible'
+set -g @plugin 'tmux-plugins/tmux-resurrect'
+set -g @plugin 'tmux-plugins/tmux-continuum'
+
+# == Plugin Settings ==
+# tmux-continuum
+set -g @continuum-restore 'on'
+
+
 
 # -- navigation ----------------------------------------------------------------
 
