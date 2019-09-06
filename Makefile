@@ -19,6 +19,7 @@ link:
 	ln -s ~/conf/oh-my-zsh/custom/plugins/amazon ~/.oh-my-zsh/custom/plugins/amazon
 	ln -s ~/conf/tmux.conf ~/.tmux.conf
 	ln -s ~/conf/tmux.conf.local ~/.tmux.conf.local
+	ln -s ~/conf/vimrc ~/.vimrc
 	ln -s ~/conf/zshrc ~/.zshrc
 	ln -s ~/conf/zshenv ~/.zshenv
 	ln -s ~/conf/mossy ~/.mossy
@@ -32,6 +33,7 @@ unlink:
 	rm -f ~/.oh-my-zsh/custom/themes/jbb.zsh-theme
 	rm -f ~/.tmux.conf
 	rm -f ~/.tmux.conf.local
+	rm -f ~/.vimrc
 	rm -f ~/.zshrc
 	rm -f ~/.zshenv
 	rm -f ~/.mossy
