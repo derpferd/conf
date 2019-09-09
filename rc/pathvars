@@ -11,3 +11,11 @@ export PATH=$HOME/bin:$PATH
 # Go Stuff
 export PATH=$PATH:$(go env GOPATH)/bin
 export GOPATH=$(go env GOPATH)
+
+# Antlr v4
+export CLASSPATH=".:$HOME/bin/antlr-4.7.2-complete.jar:$CLASSPATH"
+
+# NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

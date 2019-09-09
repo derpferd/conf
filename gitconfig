@@ -1,0 +1,6 @@
+[core]
+	editor = 'nvim'
+	excludesfile = /home/derpferd/conf/gitignore
+[user]
+	email = 123.jonathan@gmail.com
+	name = Jon der 🇨🇳👑

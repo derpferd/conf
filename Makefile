@@ -18,6 +18,7 @@ link:
 	ln -s ~/conf/tmux.conf ~/.tmux.conf
 	ln -s ~/conf/tmux.conf.local ~/.tmux.conf.local
 	ln -s ~/conf/zshrc ~/.zshrc
+	ln -s ~/conf/gitconfig ~/.gitconfig
 
 clean: unlink remove
 
@@ -28,6 +29,7 @@ unlink:
 	rm -f ~/.tmux.conf
 	rm -f ~/.tmux.conf.local
 	rm -f ~/.zshrc
+	rm -f ~/.gitconfig
 
 remove:
 	rm -rf ~/.oh-my-zsh

@@ -1,9 +1,9 @@
 #### Other Stuff ####
 
 # Apt-get
-alias sai='sudo apt-get install'
-alias sauu='sudo apt-get update && sudo apt-get upgrade -y'
-alias sau='sudo apt-get update'
+alias sai='sudo apt install'
+alias sauu='sudo apt update && sudo apt upgrade -y'
+alias sau='sudo apt update'
 
 # Basic
 alias x='exit'
@@ -16,7 +16,7 @@ elif (( $+commands[brew] )) ; then
 fi
 
 # Python
-alias python='python3'
+#alias python='python3'
 alias py='python'
 alias py3='python3'
 alias pser='python -m SimpleHTTPServer'
@@ -49,6 +49,7 @@ alias bulldog='ssh beau0307@bulldog.d.umn.edu'
 alias derp='ssh derpferd@derpferd.net'
 alias deter='ssh umd882ab@users.deterlab.net'
 alias lars='ssh derpferd@lars.d.umn.edu'
+alias anchor='ssh derpferd@basswood.d.umn.edu'
 
 # ZSH
 alias ext='extract'
@@ -62,7 +63,13 @@ local file=$1;
 openssl aes-256-cbc -d -in "$1" -out "${file%.*}";
 }
 
+export NOPK="-o PubkeyAuthentication=no"
+
 #export PYENV_ROOT="$HOME/.pyenv"
 #export PATH="$PYENV_ROOT/bin:$PATH"
 
 #alias nlp='source ~/nlp_tools/pyenv/bin/activate'
+
+# Antlr v4
+alias antlr4='java -Xmx500M -cp "$HOME/bin/antlr-4.7.2-complete.jar:$CLASSPATH" org.antlr.v4.Tool'
+alias grun='java -Xmx500M -cp "$HOME/bin/antlr-4.7.2-complete.jar:$CLASSPATH" org.antlr.v4.gui.TestRig'

@@ -49,14 +49,9 @@ ZSH_THEME_GIT_PROMPT_DIRTY="$YS_VCS_PROMPT_DIRTY"
 ZSH_THEME_GIT_PROMPT_CLEAN="$YS_VCS_PROMPT_CLEAN"
 
 
-# Amazon info.
-local amazon_info='$(amazon_auth_prompt)'
-
-
 # Prompt format: \n # USER at MACHINE in DIRECTORY on git:BRANCH STATE [TIME] \n $
 PROMPT="%{$fg[white]%}(%* ${unix_type}) \
 %(?..%{$fg[red]%}<%{$fg_bold[red]%}%?%{$reset_color%}%{$fg[red]%}> )\
-${amazon_info}\
 ${git_info}\
 %{$terminfo[bold]$fg[yellow]%}[%{$reset_color%} \
 %{$fg[red]%}%n\
