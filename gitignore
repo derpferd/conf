@@ -1,0 +1,7 @@
+build
+*.iml
+*.log
+.idea
+.DS_Store
+.vscode
+cmake-build-debug

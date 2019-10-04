@@ -17,6 +17,7 @@ alias sam="brazil-build-tool-exec sam"
 
 # DB
 alias odb_prod='pgcli -h oncilla-prod.ccdybihqvmpq.us-east-1.rds.amazonaws.com -d oncilla_prod -p 8192 -U'
+alias odb_beta='pgcli -h twsr1na-pg.czgm2u60036e.us-west-2.rds.amazonaws.com -d oncilla_devo -U'
 
 #### Other Stuff ####
 
