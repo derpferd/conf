@@ -22,6 +22,8 @@ function lmsping() {
     /apollo/env/envImprovement/bin/bsfcli -h $1 -p 7777 -s LocalizationMetadataServiceBSF -m Get --args '{"type":"StringEntity","name":"lms-vip-url-check-string","language":"en_US"}'
 }
 
+export CORP="-o ProxyCommand=None"
+
 #### Other Stuff ####
 # Basic
 alias x='exit'
