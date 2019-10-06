@@ -7,6 +7,10 @@ if [ ! -d "$HOME/.pyenv" ]; then
  git clone https://github.com/pyenv/pyenv.git ~/.pyenv
 fi
 
+if [ ! -d "/nix" ]; then
+    sh <(curl https://nixos.org/nix/install) --no-daemon
+fi
+
 if [ ! -d "$HOME/eclipse" ]; then
     /apollo/env/SDETools/bin/install-eclipse
     /apollo/env/SDETools/bin/install-eclipse-plugins brazil

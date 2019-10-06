@@ -17,3 +17,10 @@ export PATH="$PATH:/apollo/env/Mossy/bin"
 # Go Stuff
 #export PATH=$PATH:$(go env GOPATH)/bin
 #export GOPATH=$(go env GOPATH)
+
+
+# NIX
+NIX_PROFILE=/nix/var/nix/profiles/per-user/$USER/profile
+NIX_ZSH=$NIX_PROFILE/bin/zsh
+source /home/beauliej/.nix-profile/etc/profile.d/nix.sh
+export PATH=$HOME/.nix-profile/bin:$PATH
