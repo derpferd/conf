@@ -22,6 +22,7 @@ link:
 	ln -s ~/conf/tmux.conf ~/.tmux.conf
 	ln -s ~/conf/tmux.conf.local ~/.tmux.conf.local
 	ln -s ~/conf/zshrc ~/.zshrc
+	ln -s ~/conf/mw_curl /usr/local/bin/curl
 
 clean: unlink remove
 
@@ -34,6 +35,7 @@ unlink:
 	rm -f ~/.zshrc
 	rm -f ~/.config/nvim
 	rm -f ~/.config/pep8
+	rm -f /usr/local/bin/curl
 
 remove:
 	rm -rf ~/.oh-my-zsh
