@@ -12,10 +12,12 @@ download:
 	(cd ~; git clone https://github.com/robbyrussell/oh-my-zsh.git .oh-my-zsh)
 	(cd ~; git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm)
 	(cd ~/.ssh; curl https://security-bastions.amazon.com/noauth/bastions/prod/redhat.ssh.config > config)
+	(curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim)
 	./fix_oh_my_zsh.sh
 	nix-env -i tmux zsh pgcli neovim
 
 link:
+	(mkdir -p ~/.config; ln -s ~/conf/config/nvim ~/.config/nvim)
 	ln -s ~/conf/oh-my-zsh/custom/themes/jbb.zsh-theme ~/.oh-my-zsh/custom/themes/jbb.zsh-theme
 	ln -s ~/conf/rc ~/.rc
 	ln -s ~/conf/oh-my-zsh/custom/plugins/amazon ~/.oh-my-zsh/custom/plugins/amazon
