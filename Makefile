@@ -13,6 +13,7 @@ download:
 	(cd ~; git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm)
 	(cd ~/.ssh; curl https://security-bastions.amazon.com/noauth/bastions/prod/redhat.ssh.config > config)
 	./fix_oh_my_zsh.sh
+	nix-env -i tmux zsh pgcli neovim
 
 link:
 	ln -s ~/conf/oh-my-zsh/custom/themes/jbb.zsh-theme ~/.oh-my-zsh/custom/themes/jbb.zsh-theme
