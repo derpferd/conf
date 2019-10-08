@@ -25,6 +25,8 @@ link:
 	ln -s ~/conf/zshrc ~/.zshrc
 	ln -s ~/conf/zshenv ~/.zshenv
 	ln -s ~/conf/mossy ~/.mossy
+	mkdir -p ~/.config/cr
+	ln -s ~/conf/config/cr/preferences ~/.config/cr/preferences
 
 
 clean: unlink remove
@@ -35,10 +37,12 @@ unlink:
 	rm -f ~/.oh-my-zsh/custom/themes/jbb.zsh-theme
 	rm -f ~/.tmux.conf
 	rm -f ~/.tmux.conf.local
+	rm -rf ~/.tmux/plugins/tpm
 	rm -f ~/.vimrc
 	rm -f ~/.zshrc
 	rm -f ~/.zshenv
 	rm -f ~/.mossy
+	rm -f ~/.config/cr/preferences
 
 remove:
 	rm -rf ~/.oh-my-zsh
