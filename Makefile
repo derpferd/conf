@@ -45,6 +45,7 @@ unlink:
 	rm -f ~/.zshenv
 	rm -f ~/.mossy
 	rm -f ~/.config/cr/preferences
+	rm -f ~/.config/nvim
 
 remove:
 	rm -rf ~/.oh-my-zsh
