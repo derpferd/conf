@@ -42,6 +42,7 @@ alias v='nvim'
 # Git: Stole these from Maz@https://github.com/kasldfh/dotfiles
 alias gpm='git push origin mainline'
 alias gplm='git pull origin mainline'
+alias gpl='git pull --rebase'
 alias gpd='git push origin $(whoami)-dev'
 alias gpld='git pull origin $(whoami)-dev'
 alias gcm="git commit -m "
