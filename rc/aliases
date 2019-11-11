@@ -37,7 +37,7 @@ alias spip='sudo -H pip'
 alias pipi='sudo -H pip install'
 
 # Editor
-alias v='vim'
+alias v='nvim'
 
 # Git: Stole these from Maz@https://github.com/kasldfh/dotfiles
 alias gpm='git push origin mainline'

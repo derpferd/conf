@@ -1,3 +1,8 @@
+[ldm-pdx]
+region = PDX
+materialsetname = com.amazon.access.localization-timber-Timber-1
+owneremail = localization-dev+timber@amazon.com
+
 [lms-na]
 region = IAD
 materialsetname = com.amazon.access.localization-timber-Timber-1
@@ -22,11 +27,6 @@ owneremail = localization-dev+timber@amazon.com
 ownerid = 299015632994
 region = PEK
 materialsetname = com.amazon.access.localization-timber-pek-Timber-1
-
-[ldm-pdx]
-region = PDX
-materialsetname = com.amazon.access.localization-timber-Timber-1
-owneremail = localization-dev+timber@amazon.com
 
 [ldm-dub]
 region = DUB
