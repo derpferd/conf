@@ -11,6 +11,9 @@ download:
 	git clone https://github.com/zsh-users/zsh-history-substring-search ~/.oh-my-zsh/custom/plugins/zsh-history-substring-search
 	git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 	(cd ~; (curl https://pyenv.run | bash) || true)
+	(curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim)
+	setups/brew.sh
+	setups/workdocs.sh
 
 link:
 	mkdir -p ~/.config

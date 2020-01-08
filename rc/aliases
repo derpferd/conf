@@ -10,7 +10,7 @@ alias cr='cr -o'
 alias bb='brazil-build'
 alias bws='brazil ws'
 alias bbs='bb server'
-alias bbr='bb release'
+alias bbr='bb format && bb release'
 
 # SAM
 alias sam="brazil-build-tool-exec sam"
@@ -51,8 +51,8 @@ alias pipi='sudo -H pip install'
 alias v='nvim'
 
 # Git: Stole these from Maz@https://github.com/kasldfh/dotfiles
-alias gpm='git push origin master'
-alias gplm='git pull origin master'
+alias gpm='git push origin mainline'
+alias gplm='git pull origin mainline --rebase'
 alias gpd="git push origin dev"
 alias gpld="git pull origin dev"
 alias gcm="git commit -m "
