@@ -49,7 +49,7 @@ ZSH_THEME="jbb"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git amazon zsh-syntax-highlighting history-substring-search zsh-autosuggestions)
+plugins=(git amazon zsh-syntax-highlighting history-substring-search zsh-autosuggestions pyenv)
 
 # User configuration
 
