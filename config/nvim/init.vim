@@ -34,6 +34,8 @@ call plug#end()
 
 let mapleader="\<SPACE>"
 
+inoremap jk <Esc>
+
 set showmatch           " Show matching brackets.
 set number              " Show the line numbers on the left side.
 set relativenumber
