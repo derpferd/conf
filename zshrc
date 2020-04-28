@@ -53,7 +53,14 @@ plugins=(git amazon zsh-syntax-highlighting history-substring-search zsh-autosug
 
 # User configuration
 
-source $ZSH/oh-my-zsh.sh
+configs=( "$ZSH/oh-my-zsh.sh" ~/.rc/pathvars ~/.rc/aliases ~/.rc/vars )
+
+for config_file in "${configs[@]}"
+do
+  if [ -f "$config_file" ]; then
+    source "$config_file"
+  fi
+done
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -76,19 +83,6 @@ source $ZSH/oh-my-zsh.sh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
-
-#if command -v pyenv 1>/dev/null 2>&1; then
-#  eval "$(pyenv init -)"
-#fi
-#eval "$(pyenv virtualenv-init -)"
-
-if [ -f ~/.rc/pathvars ]; then
-    source ~/.rc/pathvars
-fi
-
-if [ -f ~/.rc/aliases ]; then
-    source ~/.rc/aliases
-fi
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 

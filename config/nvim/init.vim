@@ -124,5 +124,9 @@ augroup NCM2
   "           \ })
 augroup END
 
+autocmd FileType yaml setlocal shiftwidth=2 tabstop=2
+autocmd FileType sh setlocal shiftwidth=2 tabstop=2
+autocmd FileType bash setlocal shiftwidth=2 tabstop=2
+autocmd FileType zsh setlocal shiftwidth=2 tabstop=2
 
 " vim:set ft=vim sw=4 ts=4:
