@@ -88,7 +88,7 @@ let g:gruvbox_contrast_light='soft'
 " }
 
 " nerdtree-git-plugin settings
-let g:NERDTreeIndicatorMapCustom = {
+let g:NERDTreeGitStatusIndicatorMapCustom = {
     \ "Modified"  : "✹",
     \ "Staged"    : "✚",
     \ "Untracked" : "✭",

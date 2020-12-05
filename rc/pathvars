@@ -1,17 +1,17 @@
-export PYENV_ROOT="$HOME/.pyenv"
+#export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 
 # Far too slow!
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
-fi
+#if command -v pyenv 1>/dev/null 2>&1; then
+#  eval "$(pyenv init -)"
+#fi
 
 export PATH=$HOME/bin:$PATH
 
 # Go Stuff
-export PATH=$PATH:/usr/local/go/bin
-export PATH=$PATH:$(go env GOPATH)/bin
-export GOPATH=$(go env GOPATH)
+#export PATH=$PATH:/usr/local/go/bin
+#export PATH=$PATH:$(go env GOPATH)/bin
+#export GOPATH=$(go env GOPATH)
 
 # Antlr v4
 export CLASSPATH=".:$HOME/bin/antlr-4.7.2-complete.jar:$CLASSPATH"
