@@ -53,9 +53,9 @@ plugins=(git)
 
 # User configuration
 
-export PATH="/home/csugrads/beau0307/LinuxPrograms/lib/:/home/csgrads/beau0307/usr/local/lib:/u01/app/oracle/product/11.2.0/xe/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+#export PATH="/home/csugrads/beau0307/LinuxPrograms/lib/:/home/csgrads/beau0307/usr/local/lib:/u01/app/oracle/product/11.2.0/xe/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 # export MANPATH="/usr/local/man:$MANPATH"
-export JUNEST_HOME="~/.junest2"
+#export JUNEST_HOME="~/.junest2"
 
 source $ZSH/oh-my-zsh.sh
 
