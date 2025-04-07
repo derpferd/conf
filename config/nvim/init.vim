@@ -30,6 +30,9 @@ call plug#begin('~/.local/share/nvim/plugged')
     " Formater
     Plug 'Chiel92/vim-autoformat'
 
+
+    " LSP
+    Plug 'neovim/nvim-lspconfig'
 call plug#end()
 
 let mapleader="\<SPACE>"
@@ -88,7 +91,7 @@ let g:gruvbox_contrast_light='soft'
 " }
 
 " nerdtree-git-plugin settings
-let g:NERDTreeIndicatorMapCustom = {
+let g:NERDTreeGitStatusIndicatorMapCustom = {
     \ "Modified"  : "✹",
     \ "Staged"    : "✚",
     \ "Untracked" : "✭",
@@ -123,6 +126,12 @@ augroup NCM2
   "           \ 'on_complete': ['ncm2#on_complete#omni', 'vimtex#complete#omnifunc'],
   "           \ })
 augroup END
+
+" LSP
+lua <<EOF
+local lspconfig = require("lspconfig")
+lspconfig.gopls.setup({})
+EOF
 
 
 " vim:set ft=vim sw=4 ts=4:
