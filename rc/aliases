@@ -43,6 +43,9 @@ alias gd="git diff "
 alias ga="git add "
 alias gr="git rm "
 
+# Lazygit
+alias lg="lazygit"
+
 # SSH
 alias akka='ssh beau0307@akka.d.umn.edu'
 alias bulldog='ssh beau0307@bulldog.d.umn.edu'
