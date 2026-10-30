@@ -9,7 +9,7 @@ echo 'Checking for brew updates...'
 brew update
 brew upgrade
 
-brew_commands=( "neovim" "nvm" "jq" )
+brew_commands=( "go" "lazygit" "neovim" "nvm" "jq" )
 
 for cmd in "${brew_commands[@]}"
 do
