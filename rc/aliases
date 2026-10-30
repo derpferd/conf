@@ -26,6 +26,9 @@ alias pipi='sudo -H pip install'
 # Editor
 alias v='nvim'
 
+# Lazygit
+alias lg="lazygit"
+
 # Git: Stole these from Maz@https://github.com/kasldfh/dotfiles
 alias gpm='git push origin mainline'
 alias gplm='git pull origin mainline --rebase'
