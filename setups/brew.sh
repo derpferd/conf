@@ -18,3 +18,13 @@ do
       brew install "$cmd"
     fi
 done
+
+brew_casks=( "ghostty" )
+
+for cmd in "${brew_casks[@]}"
+do
+    if ! [ -x "$(command -v $cmd)" ]; then
+      echo "Installing '$cmd' from brew..."
+      brew install --cask "$cmd"
+    fi
+done
