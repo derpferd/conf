@@ -1,25 +1,3 @@
-#### Amazon Stuff ####
-# ssh
-#alias dev='ssh dev-dsk-beauliej-1e-a65ebde4.us-east-1.amazon.com' # jbeaulieu.aka.corp.amazon.com
-alias dev='ssh jbeaulieu.aka.corp.amazon.com'
-
-# cr (open by default)
-alias cr='cr -o'
-
-# brazil
-alias bb='brazil-build'
-alias bws='brazil ws'
-alias bbs='bb server'
-alias bbr='bb format && bb release'
-
-# SAM
-alias sam="brazil-build-tool-exec sam"
-alias bbsam="bb release && sam package && sam deploy"
-
-# DB
-alias odb_prod='pgcli -h oncilla-prod.ccdybihqvmpq.us-east-1.rds.amazonaws.com -d oncilla_prod -p 8192 -U'
-alias odb_beta='pgcli -h twsr1na-pg.czgm2u60036e.us-west-2.rds.amazonaws.com -d oncilla_devo -U'
-
 #### Other Stuff ####
 
 # Apt-get
@@ -45,9 +23,6 @@ alias pser='python -m SimpleHTTPServer'
 alias spip='sudo -H pip'
 alias pipi='sudo -H pip install'
 
-# Python Envs
-#alias nlp='source ~/nlp_tools/pyenv/bin/activate'
-
 # Editor
 alias v='nvim'
 
@@ -66,11 +41,8 @@ alias ga="git add "
 alias gr="git rm "
 
 # SSH
-alias akka='ssh beau0307@akka.d.umn.edu'
-alias bulldog='ssh beau0307@bulldog.d.umn.edu'
-alias derp='ssh derpferd@derpferd.net'
-alias deter='ssh umd882ab@users.deterlab.net'
-alias lars='ssh derpferd@lars.d.umn.edu'
+alias brazos='ssh derpferd@brazos.beaulieu.place'
+alias bluegrass='ssh derpferd@bluegrass.beaulieu.place'
 
 # ZSH
 alias ext='extract'
@@ -83,12 +55,3 @@ function dcyp() {
 local file=$1;
 openssl aes-256-cbc -d -in "$1" -out "${file%.*}";
 }
-
-#export PYENV_ROOT="$HOME/.pyenv"
-#export PATH="$PYENV_ROOT/bin:$PATH"
-
-#alias nlp='source ~/nlp_tools/pyenv/bin/activate'
-
-
-alias antlr4='java -Xmx500M -cp "/usr/local/lib/antlr-4.8-complete.jar:$CLASSPATH" org.antlr.v4.Tool'
-alias grun='java -Xmx500M -cp "/usr/local/lib/antlr-4.8-complete.jar:$CLASSPATH" org.antlr.v4.gui.TestRig'

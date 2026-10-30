@@ -2,15 +2,14 @@
 
 if ! [ -x "$(command -v brew)" ]; then
   echo 'Installing brew...'
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-  brew tap amazon/amazon "ssh://git.amazon.com/pkg/HomebrewAmazon"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
 echo 'Checking for brew updates...'
 brew update
 brew upgrade
 
-brew_commands=( "ninja-dev-sync" "nvm" "tig" "jq" )
+brew_commands=( "neovim" "nvm" "jq" )
 
 for cmd in "${brew_commands[@]}"
 do
